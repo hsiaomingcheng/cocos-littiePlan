@@ -45,7 +45,9 @@ export class EnemyControl extends Component {
 
         //300毫秒後銷毀
         setTimeout(() => {
-            this.node.destroy()
+            if (this.node) {
+                this.node.destroy()
+            }
         }, 300)
     }
 }
